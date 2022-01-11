@@ -8,34 +8,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var resultLabel: UILabel!
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet private weak var resultLabel: UILabel!
+
+  private  let Prefectures = ["東京都", "神奈川県", "埼玉県", "千葉県"]
+
+    @IBAction private func exitCancel(segue: UIStoryboardSegue) {
 
     }
 
-    @IBAction func exitCancel(segue: UIStoryboardSegue) {
-
+    @IBAction private func TokyoButton(segue: UIStoryboardSegue) {
+        resultLabel.text = Prefectures[0]
+    }
+    @IBAction private func KanagawaButton(segue: UIStoryboardSegue) {
+        resultLabel.text = Prefectures[1]
+    }
+    @IBAction private func SaitamaButton(segue: UIStoryboardSegue) {
+        resultLabel.text = Prefectures[2]
+    }
+    @IBAction private func TibaButton(segue: UIStoryboardSegue) {
+        resultLabel.text = Prefectures[3]
     }
 
-    @IBAction func TokyoButton(segue: UIStoryboardSegue) {
-        let second = segue.source as! SecondViewController
-        let s = SecondViewController().ChoiceButton
-        if 0 == s {
-            print("東京")
-        } else if 1 == s {
-            print("神奈川")
-        }
-//        switch s{
-//        case [0]:resultLabel.text = "東京都"
-//        case [1]:resultLabel.text = "神奈川県"
-//        case [2]:resultLabel.text =  "埼玉県"
-//        case [3]:resultLabel.text =  "千葉県"
-//        default:
-//            print("失敗しました")
-//        }
-
-    }
     
 
 }

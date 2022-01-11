@@ -67,7 +67,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="東京都"/>
                                 <connections>
-                                    <segue destination="mAB-gj-gzH" kind="unwind" unwindAction="TokyoButtonWithSegue:" id="2Aw-CX-S7z"/>
+                                    <segue destination="mAB-gj-gzH" kind="unwind" unwindAction="TokyoButtonWithSegue:" id="Epf-aw-bvz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIl-I9-UcI">
@@ -76,7 +76,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="埼玉県"/>
                                 <connections>
-                                    <segue destination="mAB-gj-gzH" kind="unwind" unwindAction="TokyoButtonWithSegue:" id="VbN-rH-mXt"/>
+                                    <segue destination="mAB-gj-gzH" kind="unwind" unwindAction="SaitamaButtonWithSegue:" id="FBL-xC-QaJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eB0-Us-FgE">
@@ -85,7 +85,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="千葉県"/>
                                 <connections>
-                                    <segue destination="mAB-gj-gzH" kind="unwind" unwindAction="TokyoButtonWithSegue:" id="RiV-ZJ-AWo"/>
+                                    <segue destination="mAB-gj-gzH" kind="unwind" unwindAction="TibaButtonWithSegue:" id="gGC-Vr-4ho"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MB-r4-3XY">
@@ -94,7 +94,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="神奈川県"/>
                                 <connections>
-                                    <segue destination="mAB-gj-gzH" kind="unwind" unwindAction="TokyoButtonWithSegue:" id="1t3-Wj-zOU"/>
+                                    <segue destination="mAB-gj-gzH" kind="unwind" unwindAction="SaitamaButtonWithSegue:" id="fiY-Hx-GNW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -110,12 +110,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outletCollection property="ChoiceButton" destination="uRF-Tv-GtL" collectionClass="NSMutableArray" id="Nfu-AO-04S"/>
-                        <outletCollection property="ChoiceButton" destination="9MB-r4-3XY" collectionClass="NSMutableArray" id="1WU-nV-sg8"/>
-                        <outletCollection property="ChoiceButton" destination="lIl-I9-UcI" collectionClass="NSMutableArray" id="r5Y-DO-K0N"/>
-                        <outletCollection property="ChoiceButton" destination="eB0-Us-FgE" collectionClass="NSMutableArray" id="Fqh-Wh-82Z"/>
-                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="3000.0000000000005" y="75.669642857142847"/>
