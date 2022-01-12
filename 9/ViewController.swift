@@ -10,10 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet private weak var resultLabel: UILabel!
 
-  private  let Prefectures = ["東京都", "神奈川県", "埼玉県", "千葉県"]
+    private  let Prefectures = ["東京都", "神奈川県", "埼玉県", "千葉県"]
 
     @IBAction private func exitCancel(segue: UIStoryboardSegue) {
-
     }
 
     @IBAction private func TokyoButton(segue: UIStoryboardSegue) {
