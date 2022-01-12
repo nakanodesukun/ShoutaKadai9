@@ -43,9 +43,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <connections>
-                        <outlet property="resultLabel" destination="Zkr-4y-66P" id="bcV-Z4-dso"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,47 +51,45 @@
         <!--Second View Controller-->
         <scene sceneID="gyb-Bc-w6p">
             <objects>
-                <exit id="mAB-gj-gzH" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LuN-LY-Rf8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="3zS-Qt-hrU" customClass="SecondViewController" customModule="_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsn-Vi-LRw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRF-Tv-GtL">
-                                <rect key="frame" x="174" y="102" width="67" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="東京都"/>
-                                <connections>
-                                    <segue destination="mAB-gj-gzH" kind="unwind" unwindAction="TokyoButtonWithSegue:" id="Epf-aw-bvz"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIl-I9-UcI">
-                                <rect key="frame" x="174" y="332" width="67" height="31"/>
+                                <rect key="frame" x="102" y="301" width="192" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="埼玉県"/>
                                 <connections>
-                                    <segue destination="mAB-gj-gzH" kind="unwind" unwindAction="SaitamaButtonWithSegue:" id="FBL-xC-QaJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eB0-Us-FgE">
-                                <rect key="frame" x="174" y="406" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="千葉県"/>
-                                <connections>
-                                    <segue destination="mAB-gj-gzH" kind="unwind" unwindAction="TibaButtonWithSegue:" id="gGC-Vr-4ho"/>
+                                    <action selector="didTapSelectButton:" destination="3zS-Qt-hrU" eventType="touchUpInside" id="0HH-uk-ClW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MB-r4-3XY">
-                                <rect key="frame" x="167" y="248" width="82" height="35"/>
+                                <rect key="frame" x="102" y="216" width="192" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="神奈川県"/>
                                 <connections>
-                                    <segue destination="mAB-gj-gzH" kind="unwind" unwindAction="SaitamaButtonWithSegue:" id="fiY-Hx-GNW"/>
+                                    <action selector="didTapSelectButton:" destination="3zS-Qt-hrU" eventType="touchUpInside" id="v42-QF-u3d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRF-Tv-GtL">
+                                <rect key="frame" x="102" y="123" width="192" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="東京都"/>
+                                <connections>
+                                    <action selector="didTapSelectButton:" destination="3zS-Qt-hrU" eventType="touchUpInside" id="pJe-cG-m7x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eB0-Us-FgE">
+                                <rect key="frame" x="102" y="388" width="192" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="千葉県"/>
+                                <connections>
+                                    <action selector="didTapSelectButton:" destination="3zS-Qt-hrU" eventType="touchUpInside" id="G7s-fU-7Mp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -103,14 +98,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="n6V-AZ-DyO">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="8Fj-9t-DfL">
-                            <connections>
-                                <segue destination="mAB-gj-gzH" kind="unwind" unwindAction="exitCancelWithSegue:" id="2sP-vz-D7Z"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="8Fj-9t-DfL"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LuN-LY-Rf8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3000.0000000000005" y="75.669642857142847"/>
         </scene>
