@@ -8,14 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    private let delegate = UIApplication.shared.delegate as! AppDelegate
+
     @IBOutlet private weak var resultLabel: UILabel!
 
-
-
-
+    @IBAction private func exit(segue: UIStoryboardSegue) {
+        resultLabel.text = delegate.shardMessage
+    }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//    }
+    @IBAction private func cancelExit(segue: UIStoryboardSegue) {
+        resultLabel.text = "未選択"
+    }
 }
+
