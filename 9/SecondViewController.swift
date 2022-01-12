@@ -18,7 +18,6 @@ class SecondViewController: UIViewController {
             case 1: return "神奈川県"
             case 2: return  "埼玉県"
             case 3: return "千葉県"
-            case 4: return "未選択"
             default: return "予期せぬエラー"
             }
         }
