@@ -36,7 +36,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="入力"/>
                                 <connections>
-                                    <segue destination="bi3-SU-tIn" kind="presentation" id="vV2-b2-5Vy"/>
+                                    <segue destination="bi3-SU-tIn" kind="presentation" identifier="toSecondViewcontrollerSegue" id="vV2-b2-5Vy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,7 +66,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="埼玉県"/>
                                 <connections>
                                     <action selector="didTapSelectButton:" destination="3zS-Qt-hrU" eventType="touchUpInside" id="V0b-SA-IiY"/>
-                                    <segue destination="S00-dm-HNA" kind="unwind" unwindAction="exitWithSegue:" id="1rj-Kq-UBk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MB-r4-3XY">
@@ -76,7 +75,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="神奈川県"/>
                                 <connections>
                                     <action selector="didTapSelectButton:" destination="3zS-Qt-hrU" eventType="touchUpInside" id="gBB-bg-ovH"/>
-                                    <segue destination="S00-dm-HNA" kind="unwind" unwindAction="exitWithSegue:" id="VvB-I2-v6d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRF-Tv-GtL">
@@ -86,7 +84,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="東京都"/>
                                 <connections>
                                     <action selector="didTapSelectButton:" destination="3zS-Qt-hrU" eventType="touchUpInside" id="1NV-Sf-SoN"/>
-                                    <segue destination="S00-dm-HNA" kind="unwind" unwindAction="exitWithSegue:" id="Kox-vz-2yY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eB0-Us-FgE">
@@ -96,7 +93,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="千葉県"/>
                                 <connections>
                                     <action selector="didTapSelectButton:" destination="3zS-Qt-hrU" eventType="touchUpInside" id="xtm-YN-IZl"/>
-                                    <segue destination="S00-dm-HNA" kind="unwind" unwindAction="exitWithSegue:" id="SO2-Xu-cO4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -107,14 +103,13 @@
                     <navigationItem key="navigationItem" id="n6V-AZ-DyO">
                         <barButtonItem key="leftBarButtonItem" tag="4" style="plain" systemItem="cancel" id="uSK-Vp-ieB">
                             <connections>
-                                <segue destination="S00-dm-HNA" kind="unwind" unwindAction="cancelExitWithSegue:" id="NqE-M6-wne"/>
+                                <action selector="cancelButton:" destination="3zS-Qt-hrU" id="XLs-5l-iJW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LuN-LY-Rf8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="S00-dm-HNA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3000.0000000000005" y="75.669642857142847"/>
         </scene>

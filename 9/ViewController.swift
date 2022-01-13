@@ -7,17 +7,24 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
-    private let delegate = UIApplication.shared.delegate as! AppDelegate
 
     @IBOutlet private weak var resultLabel: UILabel!
 
-    @IBAction private func exit(segue: UIStoryboardSegue) {
-        resultLabel.text = delegate.shardMessage
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier  {
+        case "toSecondViewcontrollerSegue":
+            guard let navigationController = segue.destination as? UINavigationController, let secondViewController = navigationController.topViewController as? SecondViewController else { return }
+            secondViewController.giveProtocol = self
+        default:
+            break
+        }
     }
-    
-    @IBAction private func cancelExit(segue: UIStoryboardSegue) {
-        resultLabel.text = "未選択"
+}
+extension ViewController: CollectionProtocol {
+    func givePrefectures(name: String) {
+        resultLabel.text = name
     }
 }
 

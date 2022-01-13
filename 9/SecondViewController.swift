@@ -8,19 +8,21 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    // 現在は循環参照は起きていないがあらかじめの予防でweakをつける
+   weak var giveProtocol: CollectionProtocol?
 
-    private let delegate = UIApplication.shared.delegate as! AppDelegate
-    
-    @IBAction private func didTapSelectButton(_ sender: UIButton) {
-        var message: String {
-            switch sender.tag {
-            case 0: return" 東京都"
-            case 1: return "神奈川県"
-            case 2: return  "埼玉県"
-            case 3: return "千葉県"
-            default: return "予期せぬエラー"
-            }
-        }
-        delegate.shardMessage = message
+   private func gavePrefectures(neme: String) {
+        giveProtocol?.givePrefectures(name: neme)
+        dismiss(animated: true, completion: nil)
     }
+
+    @IBAction private func cancelButton(_ sender: Any) {
+        gavePrefectures(neme: "未選択")
+    }
+
+    @IBAction private func didTapSelectButton(_ sender: UIButton) {
+        guard let prefectures = sender.titleLabel?.text else { return }
+        gavePrefectures(neme: prefectures)
+    }
+
 }
