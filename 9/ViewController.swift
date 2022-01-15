@@ -16,15 +16,20 @@ class ViewController: UIViewController {
         switch segue.identifier  {
         case "toSecondViewcontrollerSegue":
             guard let navigationController = segue.destination as? UINavigationController, let secondViewController = navigationController.topViewController as? SecondViewController else { return }
-            secondViewController.giveProtocol = self
+            secondViewController.delegate = self
         default:
             break
         }
     }
 }
-extension ViewController: CollectionProtocol {
-    func givePrefectures(name: String) {
+extension ViewController: SecondViewControllerDelegate {
+    func didSelectPrefecture(name: String) {
         resultLabel.text = name
+        dismiss(animated: true, completion: nil)
+    }
+
+    func didCancel() {
+        dismiss(animated: true, completion: nil)
     }
 }
 
