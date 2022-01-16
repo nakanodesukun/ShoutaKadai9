@@ -9,20 +9,20 @@ import UIKit
 
 class SecondViewController: UIViewController {
     // 現在は循環参照は起きていないがあらかじめの予防でweakをつける
-   weak var giveProtocol: CollectionProtocol?
+   weak var delegate: SecodViewControllerDelegate?
 
    private func gavePrefectures(neme: String) {
-        giveProtocol?.givePrefectures(name: neme)
+
         dismiss(animated: true, completion: nil)
     }
 
     @IBAction private func cancelButton(_ sender: Any) {
-        gavePrefectures(neme: "未選択")
+        delegate?.didCancel()
     }
 
     @IBAction private func didTapSelectButton(_ sender: UIButton) {
-        guard let prefectures = sender.titleLabel?.text else { return }
-        gavePrefectures(neme: prefectures)
+        guard let prefectureName = sender.titleLabel?.text else { return }
+        delegate?.didSelectPrefecture(name: prefectureName)
     }
 
 }

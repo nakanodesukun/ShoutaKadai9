@@ -6,7 +6,9 @@
 //
 
 import Foundation
-
-protocol CollectionProtocol: AnyObject {
-    func givePrefectures(name: String)
+// SecondViewController のdelegateのためのプロトコルなので、 SecondViewControllerDelegate にリネーム
+protocol SecodViewControllerDelegate: AnyObject {
+    // UITableViewDelegate などの命名の流儀に合わせてリネーム
+    func didSelectPrefecture(name: String)
+    func didCancel()
 }
