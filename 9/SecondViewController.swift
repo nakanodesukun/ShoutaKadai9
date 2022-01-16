@@ -11,10 +11,6 @@ class SecondViewController: UIViewController {
     // 現在は循環参照は起きていないがあらかじめの予防でweakをつける
    weak var delegate: SecodViewControllerDelegate?
 
-   private func gavePrefectures(neme: String) {
-
-        dismiss(animated: true, completion: nil)
-    }
 
     @IBAction private func cancelButton(_ sender: Any) {
         delegate?.didCancel()
