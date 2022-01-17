@@ -28,6 +28,7 @@ extension ViewController: SecodViewControllerDelegate {
         dismiss(animated: true, completion: nil)
     }
     func didCancel() {
+      //  画面を閉じる dismiss は、画面を開いた側で呼ぶようにしましょう
         dismiss(animated: true, completion: nil)
     }
 }
